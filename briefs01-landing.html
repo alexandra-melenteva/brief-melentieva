@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Бриф — Сайты-визитки и лендинги</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-dark">
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">АМ</span>
+      <span class="logo-text">Александра Мелентьева</span>
+    </a>
+    <nav class="contacts-nav">
+      <a href="index.html">← К нишам</a>
+      <a href="https://t.me/MeleSandra" target="_blank" rel="noopener">Telegram</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="brief-hero">
+    <div class="container">
+      <p class="eyebrow">Ниша 01 · Веб-разработка</p>
+      <h1>Бриф — Сайты-визитки и лендинги</h1>
+      <p class="hero-sub">Расскажите о проекте — калькулятор сразу покажет ориентировочную стоимость.</p>
+      <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+      <p class="progress-text"><span id="progressText">0</span>% заполнено</p>
+    </div>
+  </section>
+
+  <form id="briefForm">
+
+    <fieldset class="form-block">
+      <legend><span class="block-num">01</span> Контакты</legend>
+
+      <label class="field">
+        <span class="field-label">Ваше имя <em>*</em></span>
+        <input type="text" name="Имя" required placeholder="Как к вам обращаться">
+      </label>
+
+      <label class="field">
+        <span class="field-label">Телефон или Email <em>*</em></span>
+        <input type="text" name="Контакт" required placeholder="+7 ___ или email@...">
+      </label>
+
+      <label class="field">
+        <span class="field-label">Telegram / WhatsApp (если есть)</span>
+        <input type="text" name="Мессенджер" placeholder="@username или номер">
+      </label>
+
+      <label class="field">
+        <span class="field-label">Название компании / проекта</span>
+        <input type="text" name="Компания" placeholder="Если есть">
+      </label>
+    </fieldset>
+
+    <fieldset class="form-block">
+      <legend><span class="block-num">02</span> О проекте</legend>
+
+      <label class="field">
+        <span class="field-label">Главная задача сайта <em>*</em></span>
+        <textarea name="Задача" required rows="3" placeholder="Например: получать заявки, презентовать услуги, продавать товар…"></textarea>
+      </label>
+
+      <label class="field">
+        <span class="field-label">Сфера / ниша бизнеса</span>
+        <input type="text" name="Сфера" placeholder="Например: B2B-услуги, обучение, e-commerce">
+      </label>
+
+      <label class="field">
+        <span class="field-label">Целевая аудитория</span>
+        <textarea name="ЦА" rows="2" placeholder="Кто ваши клиенты? Возраст, доход, проблемы"></textarea>
+      </label>
+
+      <label class="field">
+        <span class="field-label">Есть ли уже сайт / соцсети?</span>
+        <input type="text" name="Текущие_ресурсы" placeholder="Ссылки или «нет»">
+      </label>
+
+      <label class="field">
+        <span class="field-label">Примеры сайтов, которые нравятся</span>
+        <textarea name="Референсы" rows="2" placeholder="2–3 ссылки на сайты, которые вам близки по стилю"></textarea>
+      </label>
+    </fieldset>
+
+    <fieldset class="form-block">
+      <legend><span class="block-num">03</span> Выберите пакет</legend>
+
+      <div class="packages">
+        <label class="pkg-card">
+          <input type="radio" name="Пакет" value="Basic — 8 000 ₽" data-price="8000" required>
+          <div class="pkg-inner">
+            <div class="pkg-head">
+              <span class="pkg-name">Basic</span>
+              <span class="pkg-price">8 000 ₽</span>
+            </div>
+            <ul>
+              <li>1 экран / лендинг</li>
+              <li>Готовый шаблон с адаптацией</li>
+              <li>До 3 секций</li>
+              <li>Базовая адаптивность</li>
+              <li>Форма обратной связи</li>
+              <li>Срок: 3–5 дней</li>
+            </ul>
+          </div>
+        </label>
+
+        <label class="pkg-card pkg-recommended">
+          <input type="radio" name="Пакет" value="Standard — 25 000 ₽" data-price="25000">
+          <div class="pkg-inner">
+            <div class="pkg-head">
+              <span class="pkg-name">Standard <span class="badge">⭐ выбор</span></span>
+              <span class="pkg-price">25 000 ₽</span>
+            </div>
+            <ul>
+              <li>До 5 секций / мультилендинг</li>
+              <li>Кастомный дизайн под бренд</li>
+              <li>Светлая/тёмная тема</li>
+              <li>Анимации, hover-эффекты</li>
+              <li>Базовая SEO + аналитика</li>
+              <li>Срок: 5–10 дней</li>
+            </ul>
+          </div>
+        </label>
+
+        <label class="pkg-card">
+          <input type="radio" name="Пакет" value="Premium — 55 000 ₽" data-price="55000">
+          <div class="pkg-inner">
+            <div class="pkg-head">
+              <span class="pkg-name">Premium</span>
+              <span class="pkg-price">55 000 ₽</span>
+            </div>
+            <ul>
+              <li>Уникальный дизайн + Figma</li>
+              <li>Раздел кейсов / портфолио</li>
+              <li>Светлая/тёмная тема + переключатель</li>
+              <li>Сложные анимации, параллакс</li>
+              <li>Полная SEO + микроразметка</li>
+              <li>CMS + хостинг + домен</li>
+              <li>Поддержка 14 дней</li>
+              <li>Срок: 10–20 дней</li>
+            </ul>
+          </div>
+        </label>
+      </div>
+    </fieldset>
+
+    <fieldset class="form-block">
+      <legend><span class="block-num">04</span> Дополнительные опции</legend>
+
+      <div class="options">
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_копирайтинг" value="Копирайтинг текстов (+5 000 ₽)" data-price="5000">
+          <span>Копирайтинг текстов</span><b>+5 000 ₽</b>
+        </label>
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_графика" value="Уникальная графика (+5 000 ₽)" data-price="5000">
+          <span>Уникальная графика / иллюстрации</span><b>+5 000 ₽</b>
+        </label>
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_лого" value="Логотип / мини-фирстиль (+7 000 ₽)" data-price="7000">
+          <span>Логотип / мини-фирстиль</span><b>+7 000 ₽</b>
+        </label>
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_язык" value="Многоязычность (+5 000 ₽)" data-price="5000">
+          <span>Доп. язык (мультиязычность)</span><b>+5 000 ₽</b>
+        </label>
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_блог" value="Блог / новости (+5 000 ₽)" data-price="5000">
+          <span>Блог / раздел новостей</span><b>+5 000 ₽</b>
+        </label>
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_квиз" value="Онлайн-чат / квиз (+2 500 ₽)" data-price="2500">
+          <span>Онлайн-чат или квиз</span><b>+2 500 ₽</b>
+        </label>
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_домен" value="Домен + хостинг на год (+2 500 ₽)" data-price="2500">
+          <span>Домен + хостинг (1 год)</span><b>+2 500 ₽</b>
+        </label>
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_поддержка" value="Тех. поддержка 1 мес (+5 000 ₽)" data-price="5000">
+          <span>Тех. поддержка (1 месяц)</span><b>+5 000 ₽</b>
+        </label>
+        <label class="opt-card opt-urgent">
+          <input type="checkbox" name="Доп_срочно" value="Срочное исполнение (+30%)" data-percent="30">
+          <span>⚡ Срочное исполнение</span><b>+30%</b>
+        </label>
+      </div>
+    </fieldset>
+
+    <fieldset class="form-block">
+      <legend><span class="block-num">05</span> Сроки и бюджет</legend>
+
+      <label class="field">
+        <span class="field-label">Желаемый срок запуска <em>*</em></span>
+        <input type="text" name="Срок" required placeholder="Например: до 20 октября / 2 недели">
+      </label>
+
+      <label class="field">
+        <span class="field-label">Ваш бюджет (если есть лимит)</span>
+        <input type="text" name="Бюджет_клиента" placeholder="Например: до 30 000 ₽">
+      </label>
+
+      <div class="total-box">
+        <div class="total-label">Расчётная стоимость по калькулятору:</div>
+        <div class="total-value" id="totalValue">0 ₽</div>
+        <input type="hidden" name="Итог_калькулятора" id="totalHidden" value="0 ₽">
+      </div>
+
+      <label class="field">
+        <span class="field-label">Комментарий / пожелания</span>
+        <textarea name="Комментарий" rows="3" placeholder="Всё, что считаете важным"></textarea>
+      </label>
+    </fieldset>
+
+        <div class="consent-block">
+      <label class="consent-label">
+        <input type="checkbox" id="consentCheckbox" name="Согласие_ПД" value="Дано" required>
+        <span class="consent-text">
+          Я даю согласие на обработку моих персональных данных в соответствии с
+          <a href="privacy.html" target="_blank" rel="noopener">Политикой конфиденциальности</a>
+          и подтверждаю, что ознакомлен(а) с её содержанием.
+        </span>
+      </label>
+    </div>
+
+    <button type="submit" class="btn-submit">Отправить бриф →</button>
+    <p class="form-note">Ответ — в течение 24 часов.</p>
+  </form>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <p class="footer-name">Александра Мелентьева</p>
+      <p class="footer-role">Маркетолог · Контент · Digital</p>
+    </div>
+        <div class="footer-contacts">
+      <a href="privacy.html">Политика конфиденциальности</a>
+      <a href="https://t.me/MeleSandra" target="_blank" rel="noopener">@MeleSandra</a>
+      <a href="mailto:melentievasandra@gmail.com">melentievasandra@gmail.com</a>
+    </div>
+      <a href="https://t.me/MeleSandra" target="_blank" rel="noopener">@MeleSandra</a>
+      <a href="mailto:melentievasandra@gmail.com">melentievasandra@gmail.com</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
