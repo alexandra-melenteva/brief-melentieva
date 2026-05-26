@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Бриф — Маркетинговые стратегии</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-dark">
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">АМ</span>
+      <span class="logo-text">Александра Мелентиева</span>
+    </a>
+    <nav class="contacts-nav">
+      <a href="index.html">← К нишам</a>
+      <a href="https://t.me/MeleSandra" target="_blank" rel="noopener">Telegram</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="brief-hero">
+    <div class="container">
+      <p class="eyebrow">Ниша 02 · Маркетинг</p>
+      <h1>Бриф — Маркетинговые стратегии</h1>
+      <p class="hero-sub">Расскажите о бизнесе — калькулятор сразу покажет ориентировочную стоимость.</p>
+      <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+      <p class="progress-text"><span id="progressText">0</span>% заполнено</p>
+    </div>
+  </section>
+
+  <form id="briefForm">
+
+    <!-- Скрытые поля для CRM (Make + Google Sheets) -->
+    <input type="hidden" name="Ниша" value="Маркетинговые стратегии">
+    <input type="hidden" name="Платформа" value="Сайт melentieva.ru">
+
+    <fieldset class="form-block">
+      <legend><span class="block-num">01</span> Контакты</legend>
+
+      <label class="field">
+        <span class="field-label">Ваше имя <em>*</em></span>
+        <input type="text" name="Имя" required placeholder="Как к вам обращаться">
+      </label>
+
+      <label class="field">
+        <span class="field-label">Телефон или Email <em>*</em></span>
+        <input type="text" name="Контакт" required placeholder="+7 ___ или email@...">
+      </label>
+
+      <label class="field">
+        <span class="field-label">Telegram / WhatsApp (если есть)</span>
+        <input type="text" name="Мессенджер" placeholder="@username или номер">
+      </label>
+
+      <label class="field">
+        <span class="field-label">Название компании / проекта</span>
+        <input type="text" name="Компания" placeholder="Если есть">
+      </label>
+    </fieldset>
+
+    <fieldset class="form-block">
+      <legend><span class="block-num">02</span> О бизнесе</legend>
+
+      <label class="field">
+        <span class="field-label">Главная задача стратегии <em>*</em></span>
+        <textarea name="Задача" required rows="3" placeholder="Например: увеличить продажи, выйти на новый рынок, перезапустить бренд…"></textarea>
+      </label>
+
+      <label class="field">
+        <span class="field-label">Сфера / ниша бизнеса</span>
+        <input type="text" name="Сфера" placeholder="Например: B2B-услуги, обучение, e-commerce">
+      </label>
+
+      <label class="field">
+        <span class="field-label">Продукт / услуга</span>
+        <textarea name="Продукт" rows="2" placeholder="Что вы продаёте? Опишите кратко"></textarea>
+      </label>
+
+      <label class="field">
+        <span class="field-label">Целевая аудитория</span>
+        <textarea name="ЦА" rows="2" placeholder="Кто ваши клиенты? Возраст, доход, проблемы"></textarea>
+      </label>
+
+      <label class="field">
+        <span class="field-label">Основные конкуренты</span>
+        <textarea name="Конкуренты" rows="2" placeholder="2–3 ссылки или названия"></textarea>
+      </label>
+
+      <label class="field">
+        <span class="field-label">Текущие каналы продвижения</span>
+        <input type="text" name="Текущие_каналы" placeholder="SEO, контекст, соцсети, сарафан…">
+      </label>
+    </fieldset>
+
+    <fieldset class="form-block">
+      <legend><span class="block-num">03</span> Выберите пакет</legend>
+
+      <div class="packages">
+        <label class="pkg-card">
+          <input type="radio" name="Пакет" value="Basic — 15 000 ₽" data-price="15000" required>
+          <div class="pkg-inner">
+            <div class="pkg-head">
+              <span class="pkg-name">Basic</span>
+              <span class="pkg-price">15 000 ₽</span>
+            </div>
+            <ul>
+              <li>Экспресс-аудит ниши</li>
+              <li>Анализ 3 конкурентов</li>
+              <li>Портрет ЦА (1 сегмент)</li>
+              <li>Базовое позиционирование</li>
+              <li>Рекомендации по каналам</li>
+              <li>Срок: 5–7 дней</li>
+            </ul>
+          </div>
+        </label>
+
+        <label class="pkg-
