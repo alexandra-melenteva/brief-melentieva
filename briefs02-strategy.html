@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Бриф — Маркетинговые стратегии | Александра</title>
+  <meta name="description" content="Бриф на разработку маркетинговой стратегии: анализ конкурентов, ЦА, позиционирование, план действий." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="brief-header">
+  <div class="container">
+    <a href="index.html" class="back-link">← На главную</a>
+    <h1>📊 Бриф — Маркетинговые стратегии</h1>
+    <p class="subtitle">Заполните бриф — получите стратегию, которая работает на результат, а не лежит в столе.</p>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- Прогресс -->
+  <div class="progress-wrap">
+    <div class="progress-bar">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+    <div class="progress-label">Заполнено: <span id="progressText">0</span>%</div>
+  </div>
+
+  <form id="briefForm" class="brief-form" novalidate>
+
+    <!-- Скрытые поля для Make -->
+    <input type="hidden" name="Ниша" value="Маркетинговые стратегии" />
+    <input type="hidden" name="Платформа" value="Web" />
+
+    <!-- ====== БЛОК 1: О ВАС ====== -->
+    <section class="form-block">
+      <h2>👤 О вас и проекте</h2>
+
+      <label>
+        Ваше имя <span class="req">*</span>
+        <input type="text" name="Имя" required placeholder="Как к вам обращаться?" />
+      </label>
+
+      <label>
+        Контакт (email или телефон) <span class="req">*</span>
+        <input type="text" name="Контакт" required placeholder="example@mail.ru или +7..." />
+      </label>
+
+      <label>
+        Удобный мессенджер
+        <input type="text" name="Мессенджер" placeholder="Telegram / WhatsApp / @username" />
+      </label>
+
+      <label>
+        Компания / проект
+        <input type="text" name="Компания" placeholder="Название и сайт, если есть" />
+      </label>
+    </section>
+
+    <!-- ====== БЛОК 2: ЗАДАЧА ====== -->
+    <section class="form-block">
+      <h2>🎯 Задача и контекст</h2>
+
+      <label>
+        Опишите задачу <span class="req">*</span>
+        <textarea name="Задача" required rows="3" placeholder="Например: запускаем новый продукт, нужна стратегия выхода на рынок..."></textarea>
+      </label>
+
+      <label>
+        Сфера деятельности <span class="req">*</span>
+        <input type="text" name="Сфера" required placeholder="Например: онлайн-школа, B2B-услуги, e-commerce..." />
+      </label>
+
+      <label>
+        Целевая аудитория (как вы её видите сейчас)
+        <textarea name="ЦА" rows="2" placeholder="Кто ваш клиент? Возраст, география, боли, желания..."></textarea>
+      </label>
+
+      <label>
+        Конкуренты, которых знаете
+        <textarea name="Конкуренты" rows="2" placeholder="2-5 названий / ссылок на сайты или соцсети"></textarea>
+      </label>
+
+      <label>
+        Что уже пробовали в маркетинге?
+        <textarea name="Текущие_ресурсы" rows="2" placeholder="Какие каналы использовали, что сработало / не сработало"></textarea>
+      </label>
+
+      <label>
+        Цели на ближайшие 3-6 месяцев
+        <textarea name="Цели" rows="2" placeholder="Например: выйти на 500 000 ₽/мес, открыть новый канал продаж..."></textarea>
+      </label>
+
+      <label>
+        Референсы / примеры брендов, которые нравятся
+        <textarea name="Референсы" rows="2" placeholder="Чьё позиционирование, контент или подача вас вдохновляют"></textarea>
+      </label>
+    </section>
+
+    <!-- ====== БЛОК 3: ПАКЕТЫ ====== -->
+    <section class="form-block">
+      <h2>📦 Выберите пакет</h2>
+
+      <div class="packages">
+
+        <label class="package">
+          <input type="radio" name="Пакет" value="Basic — Экспресс-стратегия (15 000 ₽)" data-price="15000" required />
+          <div class="package-card">
+            <h3>🥉 Basic</h3>
+            <div class="price">от 15 000 ₽</div>
+            <p class="package-desc">"Экспресс-стратегия" — понять направление движения</p>
+            <ul>
+              <li>Анализ ниши и 3 конкурентов</li>
+              <li>Описание ЦА (1 ключевой сегмент)</li>
+              <li>Позиционирование и УТП</li>
+              <li>Рекомендации по 2 каналам</li>
+              <li>Документ 10-15 страниц (PDF)</li>
+              <li>1 онлайн-встреча (60 мин)</li>
+              <li>⏱ Срок: 7-10 дней</li>
+            </ul>
+          </div>
+        </label>
+
+        <label class="package">
+          <input type="radio" name="Пакет" value="Standard — Рабочая стратегия (35 000 ₽)" data-price="35000" />
+          <div class="package-card package-hit">
+            <div class="hit-badge">⭐ Хит</div>
+            <h3>🥈 Standard</h3>
+            <div class="price">от 35 000 ₽</div>
+            <p class="package-desc">"Рабочая стратегия" — план действий на 3-6 месяцев</p>
+            <ul>
+              <li>Всё из Basic +</li>
+              <li>SWOT-анализ 5-7 конкурентов</li>
+              <li>2-3 сегмента ЦА (аватары, JTBD)</li>
+              <li>Контент-стратегия</li>
+              <li>Рекомендации по 4-5 каналам</li>
+              <li>Воронка продаж (схема)</li>
+              <li>KPI и метрики</li>
+              <li>План на 3 месяца (пошагово)</li>
+              <li>Документ 20-30 страниц (PDF + Notion)</li>
+              <li>2 встречи (бриф + презентация)</li>
+              <li>⏱ Срок: 14-21 день</li>
+            </ul>
+          </div>
+        </label>
+
+        <label class="package">
+          <input type="radio" name="Пакет" value="Premium — Стратегия под ключ (75 000 ₽)" data-price="75000" />
+          <div class="package-card">
+            <h3>🥇 Premium</h3>
+            <div class="price">от 75 000 ₽</div>
+            <p class="package-desc">"Под ключ" — стратегия + сопровождение внедрения</p>
+            <ul>
+              <li>Всё из Standard +</li>
+              <li>Анализ 10+ конкурентов + бенчмаркинг</li>
+              <li>Глубинные интервью с ЦА (до 5 чел.)</li>
+              <li>Бренд-платформа (миссия, tone of voice)</li>
+              <li>Медиаплан с бюджетами</li>
+              <li>Скрипты для отдела продаж</li>
+              <li>Шаблоны контента и креативов</li>
+              <li>План на 6 месяцев</li>
+              <li>Документ 40-50 страниц + презентация</li>
+              <li>3 месяца поддержки (чат + 2 созвона/мес)</li>
+              <li>⏱ Срок: 30-45 дней</li>
+            </ul>
+          </div>
+        </label>
+
+      </div>
+    </section>
+
+    <!-- ====== БЛОК 4: ДОП. ОПЦИИ ====== -->
+    <section class="form-block">
+      <h2>➕ Дополнительные опции</h2>
+
+      <div class="options">
+
+        <label class="option">
+          <input type="checkbox" name="Доп_опции" value="Срочное исполнение (+30%)" data-percent="30" />
+          <span>⚡ <b>Срочное исполнение</b> — сокращение срока в 2 раза <em>(+30% к стоимости)</em></span>
+        </label>
+
+        <label class="option">
+          <input type="checkbox" name="Доп_опции" value="Доп. анализ конкурентов (+5 шт) — 8 000 ₽" data-price="8000" />
+          <span>🔍 <b>Доп. анализ конкурентов (+5 шт)</b> — глубокий разбор каждого <em>(+8 000 ₽)</em></span>
+        </label>
+
+        <label class="option">
+          <input type="checkbox" name="Доп_опции" value="Глубинное интервью с ЦА (1 респондент) — 3 500 ₽" data-price="3500" />
+          <span>👥 <b>Глубинное интервью с ЦА</b> — запись + расшифровка + инсайты <em>(+3 500 ₽ за респондента)</em></span>
+        </label>
+
+        <label class="option">
+          <input type="checkbox" name="Доп_опции" value="Аудит текущих рекламных кампаний — 12 000 ₽" data-price="12000" />
+          <span>📊 <b>Аудит рекламных кампаний</b> — разбор того, что уже запущено <em>(+12 000 ₽)</em></span>
+        </label>
+
+        <label class="option">
+          <input type="checkbox" name="Доп_опции" value="Стратегия для нового рынка/региона — 15 000 ₽" data-price="15000" />
+          <span>🎯 <b>Стратегия для нового рынка/региона</b> — расширение на гео или нишу <em>(+15 000 ₽)</em></span>
+        </label>
+
+        <label class="option">
+          <input type="checkbox" name="Доп_опции" value="Контент-план на 3 месяца — 10 000 ₽" data-price="10000" />
+          <span>📅 <b>Контент-план на 3 месяца</b> — готовая сетка постов <em>(+10 000 ₽)</em></span>
+        </label>
+
+        <label class="option">
+          <input type="checkbox" name="Доп_опции" value="Презентация стратегии команде — 5 000 ₽" data-price="5000" />
+          <span>🎤 <b>Презентация команде клиента</b> — онлайн-встреча 90 мин <em>(+5 000 ₽)</em></span>
+        </label>
+
+        <label class="option">
+          <input type="checkbox" name="Доп_опции" value="Сопровождение внедрения (+1 месяц) — 15 000 ₽" data-price="15000" />
+          <span>🔄 <b>Сопровождение внедрения (+1 месяц)</b> — консультации, корректировки <em>(+15 000 ₽)</em></span>
+        </label>
+
+      </div>
+    </section>
+
+    <!-- ====== БЛОК 5: СРОКИ И БЮДЖЕТ ====== -->
+    <section class="form-block">
+      <h2>⏰ Сроки и бюджет</h2>
+
+      <label>
+        Желаемый срок получения стратегии
+        <input type="text" name="Срок" placeholder="Например: к 15 числа, через 2 недели..." />
+      </label>
+
+      <label>
+        Ваш ориентировочный бюджет
+        <input type="text" name="Бюджет_клиента" placeholder="Например: 30 000 ₽ / есть гибкость" />
+      </label>
+
+      <div class="total-box">
+        <span>💰 Итого по калькулятору:</span>
+        <span id="totalValue" class="total-value">0 ₽</span>
+        <input type="hidden" name="Итог_калькулятора" id="totalHidden" value="0 ₽" />
+      </div>
+    </section>
+
+    <!-- ====== БЛОК 6: ДОПОЛНИТЕЛЬНО ====== -->
+    <section class="form-block">
+      <h2>💬 Дополнительно</h2>
+
+      <label>
+        Комментарий / вопросы
+        <textarea name="Комментарий" rows="3" placeholder="Что ещё важно знать? Особые пожелания, контекст..."></textarea>
+      </label>
+
+      <label class="consent">
+        <input type="checkbox" id="consentCheckbox" required />
+        <span>Я согласен(на) на <a href="privacy.html" target="_blank">обработку персональных данных</a> <span class="req">*</span></span>
+      </label>
+    </section>
+
+    <button type="submit" class="submit-btn">🚀 Отправить заявку</button>
+
+  </form>
+</main>
+
+<footer class="brief-footer">
+  <div class="container">
+    <p>© 2026 Александра — Маркетинг, стратегии, контент</p>
+    <p><a href="index.html">На главную</a> · <a href="privacy.html">Политика конфиденциальности</a></p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
