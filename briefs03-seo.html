@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Бриф — SEO и контент-стратегия</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-dark">
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">АМ</span>
+      <span class="logo-text">Александра Мелентиева</span>
+    </a>
+    <nav class="contacts-nav">
+      <a href="index.html">← К нишам</a>
+      <a href="tel:+79914641615">📞 +7 (991) 464-16-15</a>
+      <a href="https://t.me/MeleSandra" target="_blank" rel="noopener">Telegram</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="brief-hero">
+    <div class="container">
+      <p class="eyebrow">Ниша 03 · SEO</p>
+      <h1>Бриф — SEO и контент-стратегия</h1>
+      <p class="hero-sub">Расскажите о сайте и задачах — калькулятор сразу покажет ориентировочную стоимость.</p>
+      <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+      <p class="progress-text"><span id="progressText">0</span>% заполнено</p>
+    </div>
+  </section>
+
+  <form id="briefForm">
+
+    <!-- Скрытые поля для CRM (Make + Google Sheets) -->
+    <input type="hidden" name="Ниша" value="SEO и контент-стратегия">
+    <input type="hidden" name="Платформа" value="Сайт melentieva.ru">
+
+    <fieldset class="form-block">
+      <legend><span class="block-num">01</span> Контакты</legend>
+
+      <label class="field">
+        <span class="field-label">Ваше имя <em>*</em></span>
+        <input type="text" name="Имя" required placeholder="Как к вам обращаться">
+      </label>
+
+      <label class="field">
+        <span class="field-label">Телефон или Email <em>*</em></span>
+        <input type="text" name="Контакт" required placeholder="+7 ___ или email@...">
+      </label>
+
+      <label class="field">
+        <span class="field-label">Telegram / WhatsApp (если есть)</span>
+        <input type="text" name="Мессенджер" placeholder="@username или номер">
+      </label>
+
+      <label class="field">
+        <span class="field-label">Название компании / проекта</span>
+        <input type="text" name="Компания" placeholder="Если есть">
+      </label>
+    </fieldset>
+
+    <fieldset class="form-block">
+      <legend><span class="block-num">02</span> О сайте и задаче</legend>
+
+      <label class="field">
+        <span class="field-label">Адрес сайта <em>*</em></span>
+        <input type="text" name="Адрес_сайта" required placeholder="https://example.ru">
+      </label>
+
+      <label class="field">
+        <span class="field-label">Цель SEO-продвижения <em>*</em></span>
+        <textarea name="Цель_SEO" required rows="3" placeholder="Например: вывести сайт в ТОП-10 по ключевым запросам, увеличить трафик из поиска, продвинуть блог…"></textarea>
+      </label>
+
+      <label class="field">
+        <span class="field-label">Регион продвижения</span>
+        <input type="text" name="Регион_продвижения" placeholder="Например: Москва, вся Россия, СНГ, мир">
+      </label>
+
+      <label class="field">
+        <span class="field-label">Целевая аудитория</span>
+        <textarea name="Целевая_аудитория" rows="2" placeholder="Кто ваши клиенты? Что ищут в поиске?"></textarea>
+      </label>
+    </fieldset>
+
+    <fieldset class="form-block">
+      <legend><span class="block-num">03</span> Текущее состояние SEO</legend>
+
+      <label class="field">
+        <span class="field-label">Есть ли семантическое ядро?</span>
+        <select name="Семантическое_ядро">
+          <option value="">— выберите вариант —</option>
+          <option value="Да, есть полное">Да, есть полное</option>
+          <option value="Частично есть">Частично есть</option>
+          <option value="Нет">Нет</option>
+          <option value="Не знаю">Не знаю</option>
+        </select>
+      </label>
+
+      <label class="field">
+        <span class="field-label">Текущие позиции / посещаемость</span>
+        <textarea name="Текущие_позиции" rows="2" placeholder="Например: 500 чел/мес из поиска, ТОП-30 по 10 запросам, или нет данных"></textarea>
+      </label>
+
+      <label class="field">
+        <span class="field-label">Конкуренты по поиску</span>
+        <textarea name="Конкуренты" rows="2" placeholder="2–3 сайта конкурентов из выдачи Яндекса/Google"></textarea>
+      </label>
+
+      <label class="field">
+        <span class="field-label">CMS / платформа сайта</span>
+        <input type="text" name="CMS_платформа" placeholder="Например: Tilda, WordPress, Bitrix, самописный">
+      </label>
+
+      <label class="field">
+        <span class="field-label">Есть ли доступы к аналитике?</span>
+        <select name="Доступы_аналитика">
+          <option value="">— выберите вариант —</option>
+          <option value="Да, Метрика + Analytics">Да, Метрика + Analytics</option>
+          <option value="Только Яндекс.Метрика">Только Яндекс.Метрика</option>
+          <option value="Только Google Analytics">Только Google Analytics</option>
+          <option value="Нет аналитики">Нет аналитики</option>
+          <option value="Не знаю">Не знаю</option>
+        </select>
+      </label>
+    </fieldset>
+
+    <fieldset class="form-block">
+      <legend><span class="block-num">04</span> Выберите пакет</legend>
+
+      <div class="packages">
+        <label class="pkg-card">
+          <input type="radio" name="Пакет" value="Basic — 15 000 ₽" data-price="15000" required>
+          <div class="pkg-inner">
+            <div class="pkg-head">
+              <span class="pkg-name">Basic</span>
+              <span class="pkg-price">15 000 ₽</span>
+            </div>
+            <ul>
+              <li>Семантическое ядро (до 100 ключей)</li>
+              <li>1 SEO-статья от 3000 знаков</li>
+              <li>Кластеризация ключей</li>
+              <li>Meta-теги для 3–5 страниц</li>
+              <li>Базовый отчёт по семантике</li>
+              <li>Срок: 5–7 дней</li>
+            </ul>
+          </div>
+        </label>
+
+        <label class="pkg-card pkg-recommended">
+          <input type="radio" name="Пакет" value="Standard — 35 000 ₽" data-price="35000">
+          <div class="pkg-inner">
+            <div class="pkg-head">
+              <span class="pkg-name">Standard <span class="badge">⭐ выбор</span></span>
+              <span class="pkg-price">35 000 ₽</span>
+            </div>
+            <ul>
+              <li>Семантическое ядро (до 300 ключей)</li>
+              <li>5 SEO-статей до 5000 знаков</li>
+              <li>Контент-план на месяц</li>
+              <li>Meta-теги для 10 страниц</li>
+              <li>Подробный отчёт по семантике</li>
+              <li>Анализ топ-3 конкурентов</li>
+              <li>Срок: 14–21 день</li>
+            </ul>
+          </div>
+        </label>
+
+        <label class="pkg-card">
+          <input type="radio" name="Пакет" value="Premium — 60 000 ₽" data-price="60000">
+          <div class="pkg-inner">
+            <div class="pkg-head">
+              <span class="pkg-name">Premium</span>
+              <span class="pkg-price">60 000 ₽</span>
+            </div>
+            <ul>
+              <li>Семантическое ядро (до 500 ключей)</li>
+              <li>7–10 SEO-статей от 5000 знаков</li>
+              <li>Контент-план на 2 месяца</li>
+              <li>Meta-теги для 15+ страниц</li>
+              <li>Анализ топ-5 конкурентов</li>
+              <li>Рекомендации по перелинковке</li>
+              <li>Срок: 21–30 дней</li>
+            </ul>
+          </div>
+        </label>
+      </div>
+    </fieldset>
+
+    <fieldset class="form-block">
+      <legend><span class="block-num">05</span> Дополнительные опции</legend>
+
+      <div class="options">
+
+        <!-- Доп. SEO-статьи (пресеты) -->
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_опции" value="Доп. SEO-статья — 1 шт (+3 000 ₽)" data-price="3000">
+          <span>📝 Доп. SEO-статья — 1 шт</span><b>+3 000 ₽</b>
+        </label>
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_опции" value="Доп. SEO-статьи — 3 шт (+9 000 ₽)" data-price="9000">
+          <span>📝 Доп. SEO-статьи — 3 шт</span><b>+9 000 ₽</b>
+        </label>
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_опции" value="Доп. SEO-статьи — 5 шт (+15 000 ₽)" data-price="15000">
+          <span>📝 Доп. SEO-статьи — 5 шт</span><b>+15 000 ₽</b>
+        </label>
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_опции" value="Доп. SEO-статьи — 10 шт (+28 000 ₽)" data-price="28000">
+          <span>📝 Доп. SEO-статьи — 10 шт</span><b>+28 000 ₽</b>
+        </label>
+
+        <!-- Доработка существующих статей (пресеты) -->
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_опции" value="Доработка статьи под SEO — 1 шт (+1 500 ₽)" data-price="1500">
+          <span>🔄 Доработка статьи под SEO — 1 шт</span><b>+1 500 ₽</b>
+        </label>
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_опции" value="Доработка статей под SEO — 3 шт (+4 000 ₽)" data-price="4000">
+          <span>🔄 Доработка статей под SEO — 3 шт</span><b>+4 000 ₽</b>
+        </label>
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_опции" value="Доработка статей под SEO — 5 шт (+6 500 ₽)" data-price="6500">
+          <span>🔄 Доработка статей под SEO — 5 шт</span><b>+6 500 ₽</b>
+        </label>
+
+        <!-- Meta-теги (пресеты) -->
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_опции" value="Meta-теги — 5 страниц (+2 500 ₽)" data-price="2500">
+          <span>🏷️ Meta-теги — 5 страниц</span><b>+2 500 ₽</b>
+        </label>
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_опции" value="Meta-теги — 10 страниц (+5 000 ₽)" data-price="5000">
+          <span>🏷️ Meta-теги — 10 страниц</span><b>+5 000 ₽</b>
+        </label>
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_опции" value="Meta-теги — 20 страниц (+9 000 ₽)" data-price="9000">
+          <span>🏷️ Meta-теги — 20 страниц</span><b>+9 000 ₽</b>
+        </label>
+
+        <!-- Простые опции -->
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_опции" value="Подбор LSI-ключей (+1 000 ₽)" data-price="1000">
+          <span>📊 Подбор LSI-ключей</span><b>+1 000 ₽</b>
+        </label>
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_опции" value="Расширенный отчёт по конкурентам (+3 000 ₽)" data-price="3000">
+          <span>📋 Расширенный отчёт по конкурентам</span><b>+3 000 ₽</b>
+        </label>
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_опции" value="Рекомендации по перелинковке (+2 500 ₽)" data-price="2500">
+          <span>🔗 Рекомендации по перелинковке</span><b>+2 500 ₽</b>
+        </label>
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_опции" value="Контент-план на месяц (+5 000 ₽)" data-price="5000">
+          <span>🗓️ Контент-план на месяц</span><b>+5 000 ₽</b>
+        </label>
+
+        <!-- Срочное исполнение -->
+        <label class="opt-card opt-urgent">
+          <input type="checkbox" name="Доп_опции" value="Срочное исполнение (+30%)" data-percent="30">
+          <span>⚡ Срочное исполнение</span><b>+30%</b>
+        </label>
+      </div>
+    </fieldset>
+
+    <fieldset class="form-block">
+      <legend><span class="block-num">06</span> Сроки и бюджет</legend>
+
+      <label class="field">
+        <span class="field-label">Желаемый срок старта работ <em>*</em></span>
+        <input type="text" name="Срок" required placeholder="Например: до 20 ноября / 2 недели / срочно">
+      </label>
+
+      <label class="field">
+        <span class="field-label">Ваш бюджет (если есть лимит)</span>
+        <input type="text" name="Бюджет" placeholder="Например: до 50 000 ₽">
+      </label>
+
+      <div class="total-box">
+        <div class="total-label">Расчётная стоимость по калькулятору:</div>
+        <div class="total-value" id="totalValue">0 ₽</div>
+        <input type="hidden" name="Итог_калькулятора" id="totalHidden" value="0 ₽">
+      </div>
+
+      <label class="field">
+        <span class="field-label">Комментарий / дополнительные пожелания</span>
+        <textarea name="Комментарий" rows="4" placeholder="Что ещё важно учесть? Особые требования к контенту, табу, нюансы ниши"></textarea>
+      </label>
+
+      <p class="hero-sub" style="margin-top:16px; font-size:14px; opacity:0.85;">
+        💡 <strong>Важно про SEO:</strong> это марафон, не спринт. Первые результаты обычно видны через 2–4 месяца регулярной работы. Я не даю гарантий по позициям, но даю качественный фундамент — семантику, SEO-контент и стратегию.
+      </p>
+    </fieldset>
+
+    <!-- Блок согласия на обработку персональных данных -->
+    <div class="consent-block">
+      <label class="consent-label">
+        <input type="checkbox" id="consentCheckbox" name="Согласие_ПД" value="Дано" required>
+        <span class="consent-text">
+          Я даю согласие на обработку моих персональных данных в соответствии с
+          <a href="privacy.html" target="_blank" rel="noopener">Политикой конфиденциальности</a>
+          и подтверждаю, что ознакомлен(а) с условиями обработки данных.
+        </span>
+      </label>
+    </div>
+
+    <button type="submit" class="btn-submit">Отправить заявку →</button>
+    <p class="form-note">Нажимая «Отправить», вы соглашаетесь с обработкой персональных данных</p>
+
+  </form>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <p class="footer-name">Александра Мелентиева</p>
+      <p class="footer-role">Маркетолог · Контент · Digital</p>
+    </div>
+    <div class="footer-contacts">
+      <a href="tel:+79914641615">📞 +7 (991) 464-16-15</a>
+      <a href="https://t.me/MeleSandra" target="_blank" rel="noopener">@MeleSandra</a>
+      <a href="mailto:melentievasandra@gmail.com">melentievasandra@gmail.com</a>      
+      <a href="privacy.html">Политика конфиденциальности</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

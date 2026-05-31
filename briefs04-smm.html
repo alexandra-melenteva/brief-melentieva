@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Бриф — SMM и контент-маркетинг</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-dark">
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">АМ</span>
+      <span class="logo-text">Александра Мелентиева</span>
+    </a>
+    <nav class="contacts-nav">
+      <a href="index.html">← К нишам</a>
+      <a href="tel:+79914641615">📞 +7 (991) 464-16-15</a>
+      <a href="https://t.me/MeleSandra" target="_blank" rel="noopener">Telegram</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="brief-hero">
+    <div class="container">
+      <p class="eyebrow">Ниша 04 · Социальные сети</p>
+      <h1>Бриф — SMM и контент-маркетинг</h1>
+      <p class="hero-sub">Расскажите о проекте — калькулятор сразу покажет ориентировочную стоимость ведения соцсетей.</p>
+      <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+      <p class="progress-text"><span id="progressText">0</span>% заполнено</p>
+    </div>
+  </section>
+
+  <form id="briefForm">
+
+    <!-- Скрытые поля для CRM (Make + Google Sheets) -->
+    <input type="hidden" name="Ниша" value="SMM и контент-маркетинг">
+    <input type="hidden" name="Платформа" value="Сайт melentieva.ru">
+
+    <fieldset class="form-block">
+      <legend><span class="block-num">01</span> Контакты</legend>
+
+      <label class="field">
+        <span class="field-label">Ваше имя <em>*</em></span>
+        <input type="text" name="Имя" required placeholder="Как к вам обращаться">
+      </label>
+
+      <label class="field">
+        <span class="field-label">Телефон или Email <em>*</em></span>
+        <input type="text" name="Контакт" required placeholder="+7 ___ или email@...">
+      </label>
+
+      <label class="field">
+        <span class="field-label">Telegram / WhatsApp (если есть)</span>
+        <input type="text" name="Мессенджер" placeholder="@username или номер">
+      </label>
+
+      <label class="field">
+        <span class="field-label">Название компании / проекта</span>
+        <input type="text" name="Компания" placeholder="Если есть">
+      </label>
+    </fieldset>
+
+    <fieldset class="form-block">
+      <legend><span class="block-num">02</span> О бизнесе</legend>
+
+      <label class="field">
+        <span class="field-label">Сфера / ниша бизнеса <em>*</em></span>
+        <input type="text" name="Сфера_бизнеса" required placeholder="Например: B2B-услуги, обучение, e-commerce, бьюти">
+      </label>
+
+      <label class="field">
+        <span class="field-label">Что продаёте / какой продукт <em>*</em></span>
+        <textarea name="Продукт_услуга" required rows="3" placeholder="Опишите ваш продукт или услугу, средний чек"></textarea>
+      </label>
+
+      <label class="field">
+        <span class="field-label">Целевая аудитория</span>
+        <textarea name="Целевая_аудитория" rows="2" placeholder="Кто ваши клиенты? Возраст, пол, доход, боли, желания"></textarea>
+      </label>
+
+      <label class="field">
+        <span class="field-label">Конкуренты в соцсетях</span>
+        <textarea name="Конкуренты" rows="2" placeholder="2–3 ссылки на конкурентов, чьи соцсети вам нравятся"></textarea>
+      </label>
+    </fieldset>
+
+    <fieldset class="form-block">
+      <legend><span class="block-num">03</span> Текущие соцсети</legend>
+
+      <label class="field">
+        <span class="field-label">Какие соцсети уже ведёте?</span>
+        <textarea name="Текущие_соцсети" rows="3" placeholder="Ссылки на ВКонтакте, Telegram, Дзен и т.д. Или «нет, начинаем с нуля»"></textarea>
+      </label>
+
+      <label class="field">
+        <span class="field-label">Что сейчас НЕ работает / не нравится?</span>
+        <textarea name="Проблемы_текущие" rows="2" placeholder="Например: мало охватов, нет заявок, не успеваю вести"></textarea>
+      </label>
+
+      <label class="field">
+        <span class="field-label">В каких соцсетях хотите присутствовать? <em>*</em></span>
+        <div class="checkbox-grid">
+          <label class="check-item"><input type="checkbox" name="Выбор_соцсетей" value="ВКонтакте"> ВКонтакте</label>
+          <label class="check-item"><input type="checkbox" name="Выбор_соцсетей" value="Telegram-канал"> Telegram-канал</label>
+          <label class="check-item"><input type="checkbox" name="Выбор_соцсетей" value="Дзен"> Дзен</label>
+          <label class="check-item"><input type="checkbox" name="Выбор_соцсетей" value="TenChat"> TenChat</label>
+          <label class="check-item"><input type="checkbox" name="Выбор_соцсетей" value="Одноклассники"> Одноклассники</label>
+          <label class="check-item"><input type="checkbox" name="Выбор_соцсетей" value="YouTube / Rutube"> YouTube / Rutube</label>
+        </div>
+      </label>
+    </fieldset>
+
+    <fieldset class="form-block">
+      <legend><span class="block-num">04</span> Цели и стратегия</legend>
+
+      <label class="field">
+        <span class="field-label">Главная цель SMM <em>*</em></span>
+        <textarea name="Цель_SMM" required rows="3" placeholder="Например: продажи, заявки, охваты, узнаваемость, комьюнити"></textarea>
+      </label>
+
+      <label class="field">
+        <span class="field-label">Tone of Voice (стиль общения)</span>
+        <input type="text" name="Tone_of_Voice" placeholder="Например: дружелюбный экспертный / премиальный / молодёжный">
+      </label>
+
+      <label class="field">
+        <span class="field-label">Темы-табу (о чём НЕ писать)</span>
+        <textarea name="Темы_табу" rows="2" placeholder="Например: политика, конкуренты, личные темы основателя"></textarea>
+      </label>
+
+      <label class="field">
+        <span class="field-label">Готовы давать экспертные комментарии?</span>
+        <input type="text" name="Эксперт_комментарии" placeholder="Да / нет / частично / по запросу">
+      </label>
+    </fieldset>
+
+    <fieldset class="form-block">
+      <legend><span class="block-num">05</span> Контент и визуал</legend>
+
+      <label class="field">
+        <span class="field-label">Есть ли готовый визуальный материал?</span>
+        <textarea name="Визуал_наличие" rows="2" placeholder="Фото товаров, съёмки, логотип, фирстиль — что есть"></textarea>
+      </label>
+
+      <label class="field">
+        <span class="field-label">Какой тип визуала предпочитаете?</span>
+        <select name="Тип_визуала">
+          <option value="">— выберите вариант —</option>
+          <option value="Минимализм / типографика">Минимализм / типографика</option>
+          <option value="Фото-контент / лайфстайл">Фото-контент / лайфстайл</option>
+          <option value="Иллюстрации / графика">Иллюстрации / графика</option>
+          <option value="Яркий / кричащий">Яркий / кричащий</option>
+          <option value="Премиум / люкс">Премиум / люкс</option>
+          <option value="Не знаю, нужна помощь">Не знаю, нужна помощь</option>
+        </select>
+      </label>
+
+      <label class="field">
+        <span class="field-label">Примеры аккаунтов, которые нравятся</span>
+        <textarea name="Референсы_аккаунтов" rows="2" placeholder="2–3 ссылки на соцсети по стилю / подаче"></textarea>
+      </label>
+    </fieldset>
+
+    <fieldset class="form-block">
+      <legend><span class="block-num">06</span> Выберите пакет</legend>
+
+      <div class="packages">
+        <label class="pkg-card">
+          <input type="radio" name="Пакет" value="Basic — от 18 000 ₽/мес" data-price="18000" required>
+          <div class="pkg-inner">
+            <div class="pkg-head">
+              <span class="pkg-name">Basic</span>
+              <span class="pkg-price">от 18 000 ₽/мес</span>
+            </div>
+            <ul>
+              <li>1 соцсеть на выбор</li>
+              <li>8 постов в месяц</li>
+              <li>15 сторис в месяц</li>
+              <li>Базовая аналитика</li>
+              <li>Ежемесячный отчёт</li>
+              <li>Срок запуска: 5–7 дней</li>
+            </ul>
+          </div>
+        </label>
+
+        <label class="pkg-card pkg-recommended">
+          <input type="radio" name="Пакет" value="Standard — от 35 000 ₽/мес" data-price="35000">
+          <div class="pkg-inner">
+            <div class="pkg-head">
+              <span class="pkg-name">Standard <span class="badge">⭐ выбор</span></span>
+              <span class="pkg-price">от 35 000 ₽/мес</span>
+            </div>
+            <ul>
+              <li>2 соцсети на выбор</li>
+              <li>12 постов в месяц</li>
+              <li>30 сторис в месяц</li>
+              <li>4 Reels / коротких видео</li>
+              <li><strong>Контент-план на месяц</strong></li>
+              <li>Базовая аналитика и отчёт</li>
+              <li>Срок запуска: 7–10 дней</li>
+            </ul>
+          </div>
+        </label>
+
+        <label class="pkg-card">
+          <input type="radio" name="Пакет" value="Premium — от 60 000 ₽/мес" data-price="60000">
+          <div class="pkg-inner">
+            <div class="pkg-head">
+              <span class="pkg-name">Premium</span>
+              <span class="pkg-price">от 60 000 ₽/мес</span>
+            </div>
+            <ul>
+              <li>3 соцсети на выбор</li>
+              <li>20 постов в месяц</li>
+              <li>60 сторис в месяц</li>
+              <li>8 Reels / коротких видео</li>
+              <li><strong>Контент-план с ежемесячной итерацией</strong></li>
+              <li>SMM-стратегия</li>
+              <li>Настройка таргета (стартовая)</li>
+              <li>Расширенная аналитика</li>
+              <li>Срок запуска: 10–14 дней</li>
+            </ul>
+          </div>
+        </label>
+      </div>
+    </fieldset>
+
+    <fieldset class="form-block">
+      <legend><span class="block-num">07</span> Дополнительные опции</legend>
+
+      <div class="options">
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_опции" value="Фотосессия для контента (+8 000 ₽)" data-price="8000">
+          <span>📸 Фотосессия для контента</span><b>+8 000 ₽</b>
+        </label>
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_опции" value="Доп. Reels — 4 шт (+5 000 ₽)" data-price="5000">
+          <span>🎬 Доп. Reels — 4 шт</span><b>+5 000 ₽</b>
+        </label>
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_опции" value="Доп. Reels — 8 шт (+9 000 ₽)" data-price="9000">
+          <span>🎬 Доп. Reels — 8 шт</span><b>+9 000 ₽</b>
+        </label>
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_опции" value="Уникальный визуал и обложки (+3 000 ₽)" data-price="3000">
+          <span>🎨 Уникальный визуал и обложки</span><b>+3 000 ₽</b>
+        </label>
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_опции" value="Модерация комментариев и ЛС (+5 000 ₽/мес)" data-price="5000">
+          <span>💬 Модерация комментариев и ЛС</span><b>+5 000 ₽/мес</b>
+        </label>
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_опции" value="Настройка таргета VK Ads (+10 000 ₽)" data-price="10000">
+          <span>🎯 Настройка таргета (VK Ads)</span><b>+10 000 ₽</b>
+        </label>
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_опции" value="Расширенная аналитика и дашборд (+5 000 ₽)" data-price="5000">
+          <span>📊 Расширенная аналитика и дашборд</span><b>+5 000 ₽</b>
+        </label>
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_опции" value="Конкурс / активация (+7 000 ₽)" data-price="7000">
+          <span>🎁 Конкурс / активация</span><b>+7 000 ₽</b>
+        </label>
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_опции" value="Работа с блогерами — поиск и бриф (+15 000 ₽)" data-price="15000">
+          <span>👥 Работа с блогерами</span><b>+15 000 ₽</b>
+        </label>
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_опции" value="Сценарии для Reels — 4 шт (+3 000 ₽)" data-price="3000">
+          <span>📝 Сценарии для Reels — 4 шт</span><b>+3 000 ₽</b>
+        </label>
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_опции" value="Доп. соцсеть в пакете (+8 000 ₽/мес)" data-price="8000">
+          <span>➕ Доп. соцсеть в пакете</span><b>+8 000 ₽/мес</b>
+        </label>
+        <label class="opt-card opt-urgent">
+          <input type="checkbox" name="Доп_опции" value="Срочный запуск за 3 дня (+30%)" data-percent="30">
+          <span>⚡ Срочный запуск (за 3 дня)</span><b>+30%</b>
+        </label>
+      </div>
+    </fieldset>
+
+    <fieldset class="form-block">
+      <legend><span class="block-num">08</span> Сроки и бюджет</legend>
+
+      <label class="field">
+        <span class="field-label">Желаемая дата старта ведения <em>*</em></span>
+        <input type="text" name="Срок" required placeholder="Например: с 1 ноября / через 2 недели">
+      </label>
+
+      <label class="field">
+        <span class="field-label">Ваш бюджет на SMM в месяц (если есть лимит)</span>
+        <input type="text" name="Бюджет" placeholder="Например: до 40 000 ₽/мес">
+      </label>
+
+      <label class="field">
+        <span class="field-label">Бюджет на таргет (отдельно от ведения)</span>
+        <input type="text" name="Бюджет_target" placeholder="Например: 15 000 ₽/мес или «не планируем»">
+      </label>
+
+      <div class="total-box">
+        <div class="total-label">Расчётная стоимость по калькулятору:</div>
+        <div class="total-value" id="totalValue">0 ₽</div>
+        <input type="hidden" name="Итог_калькулятора" id="totalHidden" value="0 ₽">
+      </div>
+
+      <label class="field">
+        <span class="field-label">Комментарий / дополнительные пожелания</span>
+        <textarea name="Комментарий" rows="4" placeholder="Любая дополнительная информация о проекте"></textarea>
+      </label>
+
+      <p class="hero-sub" style="margin-top:16px; font-size:14px; opacity:0.85;">
+        💡 <strong>Цены «от»:</strong> финальная стоимость зависит от сложности ниши, объёма работы и доп. опций. После заполнения брифа я сделаю точный расчёт под ваши задачи.
+      </p>
+    </fieldset>
+
+    <!-- Блок согласия на обработку персональных данных -->
+    <div class="consent-block">
+      <label class="consent-label">
+        <input type="checkbox" id="consentCheckbox" name="Согласие_ПД" value="Дано" required>
+        <span class="consent-text">
+          Я даю согласие на обработку моих персональных данных в соответствии с
+          <a href="privacy.html" target="_blank" rel="noopener">Политикой конфиденциальности</a>
+          и подтверждаю, что ознакомлен(а) с условиями обработки данных.
+        </span>
+      </label>
+    </div>
+
+    <button type="submit" class="btn-submit">Отправить заявку →</button>
+    <p class="form-note">Нажимая «Отправить», вы соглашаетесь с обработкой персональных данных</p>
+
+  </form>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <p class="footer-name">Александра Мелентиева</p>
+      <p class="footer-role">Маркетолог · Контент · Digital</p>
+    </div>
+    <div class="footer-contacts">
+      <a href="tel:+79914641615">📞 +7 (991) 464-16-15</a>
+      <a href="https://t.me/MeleSandra" target="_blank" rel="noopener">@MeleSandra</a>
+      <a href="mailto:melentievasandra@gmail.com">melentievasandra@gmail.com</a>
+      <a href="privacy.html">Политика конфиденциальности</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
