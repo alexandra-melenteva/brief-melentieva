@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Бриф — Визуал и графика</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-dark">
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">АМ</span>
+      <span class="logo-text">Александра Мелентиева</span>
+    </a>
+    <nav class="contacts-nav">
+      <a href="index.html">← К нишам</a>
+      <a href="tel:+79914641615">📞 +7 (991) 464-16-15</a>
+      <a href="https://t.me/MeleSandra" target="_blank" rel="noopener">Telegram</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="brief-hero">
+    <div class="container">
+      <p class="eyebrow">Ниша 07 · Визуал и графика</p>
+      <h1>Бриф — Визуал и графика</h1>
+      <p class="hero-sub">Расскажите о визуальной задаче — калькулятор сразу покажет ориентировочную стоимость.</p>
+      <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+      <p class="progress-text"><span id="progressText">0</span>% заполнено</p>
+    </div>
+  </section>
+
+  <form id="briefForm">
+
+    <!-- Скрытые поля для CRM (Make + Google Sheets) -->
+    <input type="hidden" name="Ниша" value="Визуал и графика">
+    <input type="hidden" name="Ниша_ID" value="visual">
+    <input type="hidden" name="Платформа" value="https://alexandra-melenteva.github.io/brief-melentieva/">
+
+    <fieldset class="form-block">
+      <legend><span class="block-num">01</span> Контакты</legend>
+
+      <label class="field">
+        <span class="field-label">Ваше имя <em>*</em></span>
+        <input type="text" name="Имя" required placeholder="Как к вам обращаться">
+      </label>
+
+      <label class="field">
+        <span class="field-label">Телефон или Email <em>*</em></span>
+        <input type="text" name="Контакт" required placeholder="+7 ___ или email@...">
+      </label>
+
+      <label class="field">
+        <span class="field-label">Telegram / WhatsApp (если есть)</span>
+        <input type="text" name="Мессенджер" placeholder="@username или номер">
+      </label>
+
+      <label class="field">
+        <span class="field-label">Название компании / проекта</span>
+        <input type="text" name="Компания" placeholder="Если есть">
+      </label>
+    </fieldset>
+
+    <fieldset class="form-block">
+      <legend><span class="block-num">02</span> О задаче</legend>
+
+      <label class="field">
+        <span class="field-label">Тип задачи <em>*</em></span>
+        <select name="Тип_задачи" required>
+          <option value="">— выберите тип задачи —</option>
+          <option value="Обложки и баннеры для соцсетей">Обложки и баннеры для соцсетей</option>
+          <option value="Посты для соцсетей (карусели, статичные)">Посты для соцсетей (карусели, статичные)</option>
+          <option value="Reels-обложки / превью видео">Reels-обложки / превью видео</option>
+          <option value="Рекламные креативы">Рекламные креативы</option>
+          <option value="Презентация / коммерческое предложение">Презентация / коммерческое предложение</option>
+          <option value="Инфографика">Инфографика</option>
+          <option value="Логотип">Логотип</option>
+          <option value="Фирменный стиль (комплекс)">Фирменный стиль (комплекс)</option>
+          <option value="Иллюстрации">Иллюстрации</option>
+          <option value="Дизайн для сайта (графика)">Дизайн для сайта (графика)</option>
+          <option value="Полиграфия (визитки, листовки)">Полиграфия (визитки, листовки)</option>
+          <option value="Комплекс (несколько типов)">Комплекс (несколько типов)</option>
+        </select>
+      </label>
+
+      <label class="field">
+        <span class="field-label">Сфера / ниша бизнеса <em>*</em></span>
+        <input type="text" name="Сфера_бизнеса" required placeholder="Например: B2B-услуги, обучение, e-commerce, бьюти">
+      </label>
+
+      <label class="field">
+        <span class="field-label">Что продаёте / какой продукт <em>*</em></span>
+        <textarea name="Продукт_услуга" required rows="3" placeholder="Опишите ваш продукт или услугу, для чего нужен визуал"></textarea>
+      </label>
+
+      <label class="field">
+        <span class="field-label">Платформы / где будет использоваться визуал</span>
+        <input type="text" name="Платформы" placeholder="Например: Instagram, Telegram, ВК, сайт, печать, презентация">
+      </label>
+
+      <label class="field">
+        <span class="field-label">Количество единиц / объём работы <em>*</em></span>
+        <input type="text" name="Количество_единиц" required placeholder="Например: 10 постов, 5 креативов, 1 логотип + гайд">
+      </label>
+    </fieldset>
+
+    <fieldset class="form-block">
+      <legend><span class="block-num">03</span> Стиль и фирменка</legend>
+
+      <label class="field">
+        <span class="field-label">Стиль визуала</span>
+        <select name="Стиль_визуала">
+          <option value="">— выберите стиль —</option>
+          <option value="Минимализм">Минимализм</option>
+          <option value="Премиум / элегантный">Премиум / элегантный</option>
+          <option value="Яркий / молодёжный">Яркий / молодёжный</option>
+          <option value="Дружелюбный / уютный">Дружелюбный / уютный</option>
+          <option value="Корпоративный / строгий">Корпоративный / строгий</option>
+          <option value="Креативный / экспериментальный">Креативный / экспериментальный</option>
+          <option value="Иллюстративный / рисованный">Иллюстративный / рисованный</option>
+          <option value="Не знаю, нужна рекомендация">Не знаю, нужна рекомендация</option>
+        </select>
+      </label>
+
+      <label class="field">
+        <span class="field-label">Фирменные цвета</span>
+        <input type="text" name="Фирменные_цвета" placeholder="Например: #1A1A2E, #E94560 / тёмно-синий + красный / нет фирменных">
+      </label>
+
+      <label class="field">
+        <span class="field-label">Есть ли логотип?</span>
+        <select name="Логотип_наличие">
+          <option value="">— выберите вариант —</option>
+          <option value="Да, есть готовый (предоставлю файлы)">Да, есть готовый (предоставлю файлы)</option>
+          <option value="Есть, но нужна доработка">Есть, но нужна доработка</option>
+          <option value="Нет, нужно создать">Нет, нужно создать</option>
+          <option value="Не нужен для этой задачи">Не нужен для этой задачи</option>
+        </select>
+      </label>
+
+      <label class="field">
+        <span class="field-label">Источники фото / материалов</span>
+        <select name="Источники_фото">
+          <option value="">— выберите источник —</option>
+          <option value="Свои фото / материалы">Свои фото / материалы</option>
+          <option value="Стоковые фото (бесплатные)">Стоковые фото (бесплатные)</option>
+          <option value="Стоковые фото (премиум)">Стоковые фото (премиум)</option>
+          <option value="Нужна фотосессия">Нужна фотосессия</option>
+          <option value="AI-генерация изображений">AI-генерация изображений</option>
+          <option value="Комбинация (опишу в комментарии)">Комбинация (опишу в комментарии)</option>
+        </select>
+      </label>
+
+      <label class="field">
+        <span class="field-label">Референсы визуала (что нравится)</span>
+        <textarea name="Референсы_визуала" rows="2" placeholder="2–3 ссылки или скриншоты визуала, который вам нравится"></textarea>
+      </label>
+
+      <label class="field">
+        <span class="field-label">Допустимо ли использование AI-инструментов?</span>
+        <select name="AI_запустимо">
+          <option value="">— выберите вариант —</option>
+          <option value="Да, разрешаю AI для генерации">Да, разрешаю AI для генерации</option>
+          <option value="Да, но только как референс">Да, но только как референс</option>
+          <option value="Нет, только ручной дизайн">Нет, только ручной дизайн</option>
+          <option value="Без разницы, на ваше усмотрение">Без разницы, на ваше усмотрение</option>
+        </select>
+      </label>
+    </fieldset>
+
+    <fieldset class="form-block">
+      <legend><span class="block-num">04</span> Выберите пакет</legend>
+
+      <div class="packages">
+        <label class="pkg-card">
+          <input type="radio" name="Пакет" value="Basic — от 5 000 ₽" data-price="5000" required>
+          <div class="pkg-inner">
+            <div class="pkg-head">
+              <span class="pkg-name">Basic</span>
+              <span class="pkg-price">от 5 000 ₽</span>
+            </div>
+            <ul>
+              <li>1–3 единицы графики</li>
+              <li>1 концепция дизайна</li>
+              <li>1 итерация правок</li>
+              <li>Исходники в PNG/JPG</li>
+              <li>Срок: 3–5 дней</li>
+            </ul>
+          </div>
+        </label>
+
+        <label class="pkg-card pkg-recommended">
+          <input type="radio" name="Пакет" value="Standard — от 15 000 ₽" data-price="15000">
+          <div class="pkg-inner">
+            <div class="pkg-head">
+              <span class="pkg-name">Standard <span class="badge">⭐ выбор</span></span>
+              <span class="pkg-price">от 15 000 ₽</span>
+            </div>
+            <ul>
+              <li>5–10 единиц графики</li>
+              <li>2 концепции на выбор</li>
+              <li>2 итерации правок</li>
+              <li>Исходники PNG/JPG + PSD/AI</li>
+              <li>Адаптация под разные платформы</li>
+              <li>Срок: 7–10 дней</li>
+            </ul>
+          </div>
+        </label>
+
+        <label class="pkg-card">
+          <input type="radio" name="Пакет" value="Premium — от 40 000 ₽" data-price="40000">
+          <div class="pkg-inner">
+            <div class="pkg-head">
+              <span class="pkg-name">Premium</span>
+              <span class="pkg-price">от 40 000 ₽</span>
+            </div>
+            <ul>
+              <li>Комплекс визуала (20+ единиц)</li>
+              <li>Разработка визуального стиля</li>
+              <li>Брендбук / гайдлайны</li>
+              <li>Шаблоны для самостоятельной работы</li>
+              <li>Безлимит правок в рамках ТЗ</li>
+              <li>Все исходники + права</li>
+              <li>Срок: 14–21 день</li>
+            </ul>
+          </div>
+        </label>
+      </div>
+    </fieldset>
+
+    <fieldset class="form-block">
+      <legend><span class="block-num">05</span> Дополнительные опции</legend>
+
+      <div class="options">
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_опции" value="Доп. единица графики (+1 500 ₽/шт)" data-price="1500">
+          <span>🎨 Доп. единица графики</span><b>+1 500 ₽/шт</b>
+        </label>
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_опции" value="Пакет +5 единиц (+6 000 ₽)" data-price="6000">
+          <span>🎨 Пакет +5 единиц</span><b>+6 000 ₽</b>
+        </label>
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_опции" value="Пакет +10 единиц (+11 000 ₽)" data-price="11000">
+          <span>🎨 Пакет +10 единиц</span><b>+11 000 ₽</b>
+        </label>
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_опции" value="Логотип (+8 000 ₽)" data-price="8000">
+          <span>🏷️ Логотип</span><b>+8 000 ₽</b>
+        </label>
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_опции" value="Фирменный стиль базовый (+15 000 ₽)" data-price="15000">
+          <span>✨ Фирменный стиль базовый</span><b>+15 000 ₽</b>
+        </label>
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_опции" value="Брендбук / гайдлайны (+20 000 ₽)" data-price="20000">
+          <span>📘 Брендбук / гайдлайны</span><b>+20 000 ₽</b>
+        </label>
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_опции" value="Подбор стоковых фото (+2 000 ₽)" data-price="2000">
+          <span>📷 Подбор стоковых фото</span><b>+2 000 ₽</b>
+        </label>
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_опции" value="AI-генерация изображений (+3 000 ₽)" data-price="3000">
+          <span>🤖 AI-генерация изображений</span><b>+3 000 ₽</b>
+        </label>
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_опции" value="Ретушь / обработка фото (+1 500 ₽/шт)" data-price="1500">
+          <span>🖌️ Ретушь / обработка фото</span><b>+1 500 ₽/шт</b>
+        </label>
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_опции" value="Анимация / GIF (+3 000 ₽)" data-price="3000">
+          <span>🎬 Анимация / GIF</span><b>+3 000 ₽</b>
+        </label>
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_опции" value="Адаптация под платформы (+2 500 ₽)" data-price="2500">
+          <span>📱 Адаптация под платформы</span><b>+2 500 ₽</b>
+        </label>
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_опции" value="Шаблоны для самостоятельной работы (+5 000 ₽)" data-price="5000">
+          <span>🧩 Шаблоны (Canva/Figma)</span><b>+5 000 ₽</b>
+        </label>
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_опции" value="Доп. итерация правок (+1 500 ₽)" data-price="1500">
+          <span>🔄 Доп. итерация правок</span><b>+1 500 ₽</b>
+        </label>
+        <label class="opt-card opt-urgent">
+          <input type="checkbox" name="Доп_опции" value="Срочное исполнение (+30%)" data-percent="30">
+          <span>⚡ Срочное исполнение</span><b>+30%</b>
+        </label>
+      </div>
+    </fieldset>
+
+    <fieldset class="form-block">
+      <legend><span class="block-num">06</span> Сроки и бюджет</legend>
+
+      <label class="field">
+        <span class="field-label">Желаемый срок сдачи <em>*</em></span>
+        <input type="text" name="Срок" required placeholder="Например: до 20 ноября / 1 неделя / срочно">
+      </label>
+
+      <label class="field">
+        <span class="field-label">Ваш бюджет (если есть лимит)</span>
+        <input type="text" name="Бюджет" placeholder="Например: до 20 000 ₽">
+      </label>
+
+      <div class="total-box">
+        <div class="total-label">Расчётная стоимость по калькулятору:</div>
+        <div class="total-value" id="totalValue">0 ₽</div>
+        <input type="hidden" name="Итог_калькулятора" id="totalHidden" value="0 ₽">
+      </div>
+
+      <label class="field">
+        <span class="field-label">Комментарий / дополнительные пожелания</span>
+        <textarea name="Комментарий" rows="4" placeholder="Что ещё важно? Особые требования, табу, нюансы, ваши идеи"></textarea>
+      </label>
+
+      <p class="hero-sub" style="margin-top:16px; font-size:14px; opacity:0.85;">
+        💡 <strong>Цены «от»:</strong> финальная стоимость зависит от сложности задачи, количества единиц и итераций. После заполнения брифа я сделаю точный расчёт под вашу задачу.
+      </p>
+    </fieldset>
+
+    <!-- Блок согласия на обработку персональных данных -->
+    <div class="consent-block">
+      <label class="consent-label">
+        <input type="checkbox" id="consentCheckbox" name="Согласие_ПД" value="Дано" required>
+        <span class="consent-text">
+          Я даю согласие на обработку моих персональных данных в соответствии с
+          <a href="privacy.html" target="_blank" rel="noopener">Политикой конфиденциальности</a>
+          и подтверждаю, что ознакомлен(а) с условиями обработки данных.
+        </span>
+      </label>
+    </div>
+
+    <button type="submit" class="btn-submit">Отправить заявку →</button>
+    <p class="form-note">Нажимая «Отправить», вы соглашаетесь с обработкой персональных данных</p>
+
+  </form>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <p class="footer-name">Александра Мелентиева</p>
+      <p class="footer-role">Маркетолог · Контент · Digital</p>
+    </div>
+    <div class="footer-contacts">
+      <a href="tel:+79914641615">📞 +7 (991) 464-16-15</a>
+      <a href="https://t.me/MeleSandra" target="_blank" rel="noopener">@MeleSandra</a>
+      <a href="mailto:melentievasandra@gmail.com">melentievasandra@gmail.com</a>
+      <a href="privacy.html">Политика конфиденциальности</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

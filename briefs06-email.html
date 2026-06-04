@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Бриф — E-mail маркетинг и рассылки</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-dark">
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">АМ</span>
+      <span class="logo-text">Александра Мелентиева</span>
+    </a>
+    <nav class="contacts-nav">
+      <a href="index.html">← К нишам</a>
+      <a href="tel:+79914641615">📞 +7 (991) 464-16-15</a>
+      <a href="https://t.me/MeleSandra" target="_blank" rel="noopener">Telegram</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="brief-hero">
+    <div class="container">
+      <p class="eyebrow">Ниша 06 · E-mail маркетинг</p>
+      <h1>Бриф — E-mail маркетинг и рассылки</h1>
+      <p class="hero-sub">Расскажите о ваших рассылках — калькулятор сразу покажет ориентировочную стоимость.</p>
+      <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+      <p class="progress-text"><span id="progressText">0</span>% заполнено</p>
+    </div>
+  </section>
+
+  <form id="briefForm">
+
+    <!-- Скрытые поля для CRM (Make + Google Sheets) -->
+    <input type="hidden" name="Ниша" value="E-mail маркетинг и рассылки">
+    <input type="hidden" name="Ниша_ID" value="email">
+    <input type="hidden" name="Платформа" value="https://alexandra-melenteva.github.io/brief-melentieva/">
+
+    <fieldset class="form-block">
+      <legend><span class="block-num">01</span> Контакты</legend>
+
+      <label class="field">
+        <span class="field-label">Ваше имя <em>*</em></span>
+        <input type="text" name="Имя" required placeholder="Как к вам обращаться">
+      </label>
+
+      <label class="field">
+        <span class="field-label">Телефон или Email <em>*</em></span>
+        <input type="text" name="Контакт" required placeholder="+7 ___ или email@...">
+      </label>
+
+      <label class="field">
+        <span class="field-label">Telegram / WhatsApp (если есть)</span>
+        <input type="text" name="Мессенджер" placeholder="@username или номер">
+      </label>
+
+      <label class="field">
+        <span class="field-label">Название компании / проекта</span>
+        <input type="text" name="Компания" placeholder="Если есть">
+      </label>
+    </fieldset>
+
+    <fieldset class="form-block">
+      <legend><span class="block-num">02</span> О бизнесе</legend>
+
+      <label class="field">
+        <span class="field-label">Сфера / ниша бизнеса <em>*</em></span>
+        <input type="text" name="Сфера_бизнеса" required placeholder="Например: B2B-услуги, обучение, e-commerce, бьюти">
+      </label>
+
+      <label class="field">
+        <span class="field-label">Что продаёте / какой продукт <em>*</em></span>
+        <textarea name="Продукт_услуга" required rows="3" placeholder="Опишите ваш продукт или услугу, средний чек"></textarea>
+      </label>
+
+      <label class="field">
+        <span class="field-label">Целевая аудитория</span>
+        <textarea name="Целевая_аудитория" rows="2" placeholder="Кто получатели рассылки? Возраст, пол, доход, боли, желания"></textarea>
+      </label>
+    </fieldset>
+
+    <fieldset class="form-block">
+      <legend><span class="block-num">03</span> О рассылках</legend>
+
+      <label class="field">
+        <span class="field-label">Тип рассылки <em>*</em></span>
+        <select name="Тип_рассылки" required>
+          <option value="">— выберите тип рассылки —</option>
+          <option value="Welcome-цепочка (приветственная)">Welcome-цепочка (приветственная)</option>
+          <option value="Регулярная (новости, дайджест)">Регулярная (новости, дайджест)</option>
+          <option value="Продающая (промо, акции)">Продающая (промо, акции)</option>
+          <option value="Триггерная (автоматическая)">Триггерная (автоматическая)</option>
+          <option value="Реактивационная (для «спящих»)">Реактивационная (для «спящих»)</option>
+          <option value="Транзакционная (заказы, чеки)">Транзакционная (заказы, чеки)</option>
+          <option value="Образовательный курс / контент">Образовательный курс / контент</option>
+          <option value="Комплекс (несколько типов)">Комплекс (несколько типов)</option>
+        </select>
+      </label>
+
+      <label class="field">
+        <span class="field-label">Сервис рассылок</span>
+        <select name="Сервис_рассылок">
+          <option value="">— выберите сервис —</option>
+          <option value="Unisender">Unisender</option>
+          <option value="Mindbox">Mindbox</option>
+          <option value="SendPulse">SendPulse</option>
+          <option value="DashaMail">DashaMail</option>
+          <option value="GetResponse">GetResponse</option>
+          <option value="Mailganer">Mailganer</option>
+          <option value="Другой (укажу в комментарии)">Другой (укажу в комментарии)</option>
+          <option value="Не выбран, нужна рекомендация">Не выбран, нужна рекомендация</option>
+        </select>
+      </label>
+
+      <label class="field">
+        <span class="field-label">Размер базы подписчиков <em>*</em></span>
+        <select name="Размер_базы" required>
+          <option value="">— выберите размер базы —</option>
+          <option value="Базы пока нет">Базы пока нет</option>
+          <option value="До 1 000 контактов">До 1 000 контактов</option>
+          <option value="1 000 – 5 000 контактов">1 000 – 5 000 контактов</option>
+          <option value="5 000 – 20 000 контактов">5 000 – 20 000 контактов</option>
+          <option value="20 000 – 100 000 контактов">20 000 – 100 000 контактов</option>
+          <option value="Более 100 000 контактов">Более 100 000 контактов</option>
+        </select>
+      </label>
+
+      <label class="field">
+        <span class="field-label">Откуда база подписчиков</span>
+        <textarea name="Источник_базы" rows="2" placeholder="Например: форма подписки на сайте, заказы в интернет-магазине, лид-магнит, импорт из CRM"></textarea>
+      </label>
+
+      <label class="field">
+        <span class="field-label">Частота рассылок</span>
+        <select name="Частота_рассылок">
+          <option value="">— выберите частоту —</option>
+          <option value="Разовая рассылка">Разовая рассылка</option>
+          <option value="1 раз в неделю">1 раз в неделю</option>
+          <option value="2–3 раза в неделю">2–3 раза в неделю</option>
+          <option value="1 раз в 2 недели">1 раз в 2 недели</option>
+          <option value="1 раз в месяц">1 раз в месяц</option>
+          <option value="По триггерам (авто)">По триггерам (авто)</option>
+          <option value="Не знаю, нужна стратегия">Не знаю, нужна стратегия</option>
+        </select>
+      </label>
+
+      <label class="field">
+        <span class="field-label">Цель рассылки <em>*</em></span>
+        <textarea name="Цель_рассылки" required rows="3" placeholder="Например: повторные продажи, прогрев перед запуском, удержание клиентов, обучение"></textarea>
+      </label>
+    </fieldset>
+
+    <fieldset class="form-block">
+      <legend><span class="block-num">04</span> Стиль и интеграции</legend>
+
+      <label class="field">
+        <span class="field-label">Tone of Voice (стиль писем)</span>
+        <input type="text" name="Tone_of_Voice" placeholder="Например: дружелюбный экспертный / премиальный / строгий B2B">
+      </label>
+
+      <label class="field">
+        <span class="field-label">Референсы писем (что нравится)</span>
+        <textarea name="Референсы_писем" rows="2" placeholder="2–3 примера писем (скрины, ссылки), чей стиль или подача вам нравится"></textarea>
+      </label>
+
+      <label class="field">
+        <span class="field-label">Интеграции с CRM / другими системами</span>
+        <textarea name="Интеграции_CRM" rows="2" placeholder="Например: AmoCRM, Битрикс24, RetailCRM, Tilda. Или «не нужно»"></textarea>
+      </label>
+    </fieldset>
+
+    <fieldset class="form-block">
+      <legend><span class="block-num">05</span> Выберите пакет</legend>
+
+      <div class="packages">
+        <label class="pkg-card">
+          <input type="radio" name="Пакет" value="Basic — от 8 000 ₽" data-price="8000" required>
+          <div class="pkg-inner">
+            <div class="pkg-head">
+              <span class="pkg-name">Basic</span>
+              <span class="pkg-price">от 8 000 ₽</span>
+            </div>
+            <ul>
+              <li>1 разовое письмо</li>
+              <li>Дизайн-шаблон (адаптивный)</li>
+              <li>Текст и вёрстка</li>
+              <li>Настройка отправки в сервисе</li>
+              <li>Базовая сегментация (до 3 сегментов)</li>
+              <li>Срок: 3–5 дней</li>
+            </ul>
+          </div>
+        </label>
+
+        <label class="pkg-card pkg-recommended">
+          <input type="radio" name="Пакет" value="Standard — от 25 000 ₽" data-price="25000">
+          <div class="pkg-inner">
+            <div class="pkg-head">
+              <span class="pkg-name">Standard <span class="badge">⭐ выбор</span></span>
+              <span class="pkg-price">от 25 000 ₽</span>
+            </div>
+            <ul>
+              <li>Welcome-цепочка из 4–5 писем</li>
+              <li>Уникальный дизайн писем</li>
+              <li>Тексты и вёрстка</li>
+              <li>Настройка автоматизации</li>
+              <li>Сегментация базы (до 5 сегментов)</li>
+              <li>A/B тест темы письма</li>
+              <li>Базовая аналитика</li>
+              <li>Срок: 10–14 дней</li>
+            </ul>
+          </div>
+        </label>
+
+        <label class="pkg-card">
+          <input type="radio" name="Пакет" value="Premium — от 60 000 ₽" data-price="60000">
+          <div class="pkg-inner">
+            <div class="pkg-head">
+              <span class="pkg-name">Premium</span>
+              <span class="pkg-price">от 60 000 ₽</span>
+            </div>
+            <ul>
+              <li>Стратегия e-mail маркетинга</li>
+              <li>Комплекс цепочек (welcome + триггеры)</li>
+              <li>Уникальный дизайн писем</li>
+              <li>Сложная сегментация и персонализация</li>
+              <li>Интеграция с CRM</li>
+              <li>A/B тесты (тема, контент, CTA)</li>
+              <li>Расширенная аналитика и дашборд</li>
+              <li>Срок: 21–30 дней</li>
+            </ul>
+          </div>
+        </label>
+      </div>
+    </fieldset>
+
+    <fieldset class="form-block">
+      <legend><span class="block-num">06</span> Дополнительные опции</legend>
+
+      <div class="options">
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_опции" value="Доп. письмо — 1 шт (+4 000 ₽)" data-price="4000">
+          <span>✉️ Доп. письмо — 1 шт</span><b>+4 000 ₽</b>
+        </label>
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_опции" value="Доп. цепочка — 3 письма (+10 000 ₽)" data-price="10000">
+          <span>✉️ Доп. цепочка — 3 письма</span><b>+10 000 ₽</b>
+        </label>
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_опции" value="Уникальный дизайн письма (+3 000 ₽)" data-price="3000">
+          <span>🎨 Уникальный дизайн письма</span><b>+3 000 ₽</b>
+        </label>
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_опции" value="Адаптивная вёрстка для мобильных (+2 000 ₽)" data-price="2000">
+          <span>📱 Адаптивная вёрстка</span><b>+2 000 ₽</b>
+        </label>
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_опции" value="Сегментация базы (+5 000 ₽)" data-price="5000">
+          <span>🎯 Сегментация базы</span><b>+5 000 ₽</b>
+        </label>
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_опции" value="A/B тестирование (+3 000 ₽)" data-price="3000">
+          <span>🔬 A/B тестирование</span><b>+3 000 ₽</b>
+        </label>
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_опции" value="Интеграция с CRM (+8 000 ₽)" data-price="8000">
+          <span>🔗 Интеграция с CRM</span><b>+8 000 ₽</b>
+        </label>
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_опции" value="Настройка домена (SPF, DKIM, DMARC) (+5 000 ₽)" data-price="5000">
+          <span>🛡️ Настройка домена (SPF/DKIM)</span><b>+5 000 ₽</b>
+        </label>
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_опции" value="Прогрев домена (+10 000 ₽)" data-price="10000">
+          <span>🔥 Прогрев домена</span><b>+10 000 ₽</b>
+        </label>
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_опции" value="Лид-магнит для сбора базы (+7 000 ₽)" data-price="7000">
+          <span>🧲 Лид-магнит для сбора базы</span><b>+7 000 ₽</b>
+        </label>
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_опции" value="Форма подписки на сайт (+4 000 ₽)" data-price="4000">
+          <span>📋 Форма подписки на сайт</span><b>+4 000 ₽</b>
+        </label>
+        <label class="opt-card">
+          <input type="checkbox" name="Доп_опции" value="Расширенная аналитика и дашборд (+5 000 ₽)" data-price="5000">
+          <span>📊 Расширенная аналитика</span><b>+5 000 ₽</b>
+        </label>
+        <label class="opt-card opt-urgent">
+          <input type="checkbox" name="Доп_опции" value="Срочное исполнение (+30%)" data-percent="30">
+          <span>⚡ Срочное исполнение</span><b>+30%</b>
+        </label>
+      </div>
+    </fieldset>
+
+    <fieldset class="form-block">
+      <legend><span class="block-num">07</span> Сроки и бюджет</legend>
+
+      <label class="field">
+        <span class="field-label">Желаемый срок запуска <em>*</em></span>
+        <input type="text" name="Срок" required placeholder="Например: до 20 ноября / 1 неделя / срочно">
+      </label>
+
+      <label class="field">
+        <span class="field-label">Ваш бюджет (если есть лимит)</span>
+        <input type="text" name="Бюджет" placeholder="Например: до 30 000 ₽">
+      </label>
+
+      <div class="total-box">
+        <div class="total-label">Расчётная стоимость по калькулятору:</div>
+        <div class="total-value" id="totalValue">0 ₽</div>
+        <input type="hidden" name="Итог_калькулятора" id="totalHidden" value="0 ₽">
+      </div>
+
+      <label class="field">
+        <span class="field-label">Комментарий / дополнительные пожелания</span>
+        <textarea name="Комментарий" rows="4" placeholder="Что ещё важно? Особые требования, нюансы, история прошлых рассылок"></textarea>
+      </label>
+
+      <p class="hero-sub" style="margin-top:16px; font-size:14px; opacity:0.85;">
+        💡 <strong>Цены «от»:</strong> финальная стоимость зависит от объёма работы, сложности интеграций и размера базы. После заполнения брифа я сделаю точный расчёт под ваши задачи.
+      </p>
+    </fieldset>
+
+    <!-- Блок согласия на обработку персональных данных -->
+    <div class="consent-block">
+      <label class="consent-label">
+        <input type="checkbox" id="consentCheckbox" name="Согласие_ПД" value="Дано" required>
+        <span class="consent-text">
+          Я даю согласие на обработку моих персональных данных в соответствии с
+          <a href="privacy.html" target="_blank" rel="noopener">Политикой конфиденциальности</a>
+          и подтверждаю, что ознакомлен(а) с условиями обработки данных.
+        </span>
+      </label>
+    </div>
+
+    <button type="submit" class="btn-submit">Отправить заявку →</button>
+    <p class="form-note">Нажимая «Отправить», вы соглашаетесь с обработкой персональных данных</p>
+
+  </form>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <p class="footer-name">Александра Мелентиева</p>
+      <p class="footer-role">Маркетолог · Контент · Digital</p>
+    </div>
+    <div class="footer-contacts">
+      <a href="tel:+79914641615">📞 +7 (991) 464-16-15</a>
+      <a href="https://t.me/MeleSandra" target="_blank" rel="noopener">@MeleSandra</a>
+      <a href="mailto:melentievasandra@gmail.com">melentievasandra@gmail.com</a>
+      <a href="privacy.html">Политика конфиденциальности</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
